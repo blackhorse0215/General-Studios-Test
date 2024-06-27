@@ -4,6 +4,7 @@ import HomeCollection from '../components/HomeCollection';
 import HomeProductList from '../components/HomeProductList';
 import { FirstScroll } from '../script/FirstScroll';
 import MyContext from '../context/Mycontext';
+import '../index.css'
 
 const Home=()=>{
 
