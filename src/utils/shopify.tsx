@@ -261,7 +261,7 @@ export const addProductToCheckout = async (
   });
 
   const data: AddProductToCheckoutResponse = await response.json();
-  console.log(data);
+  localStorage.setItem('checkoutUrl',data.data.checkoutLineItemsAdd.checkout.webUrl)
   
   return data.data.checkoutLineItemsAdd.checkout;
 };
