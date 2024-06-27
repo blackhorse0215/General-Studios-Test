@@ -5,7 +5,7 @@ import HomeProductList from '../components/HomeProductList';
 import { FirstScroll } from '../script/FirstScroll';
 import MyContext from '../context/Mycontext';
 
-function Home(){
+const Home=()=>{
 
     const {Mycontext, setMycontext} = useContext(MyContext)
 
@@ -23,4 +23,4 @@ function Home(){
     )
 }
 
-export default Home;
+render(Home, document.getElementById('preact-home'))

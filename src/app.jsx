@@ -31,8 +31,6 @@ export function App() {
         <Router>
           <Home path='/'/>
           <FAQ path='/faq'/>
-          {/* <NotFound default /> */}
-          {/* <Redirect path="/" to="/home" /> */}
         </Router>
         <Sidebar/>
       </MyContext.Provider>
