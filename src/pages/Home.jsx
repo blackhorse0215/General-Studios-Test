@@ -4,23 +4,22 @@ import HomeCollection from '../components/HomeCollection';
 import HomeProductList from '../components/HomeProductList';
 import { FirstScroll } from '../script/FirstScroll';
 import MyContext from '../context/Mycontext';
+import '../index.css'
 
-function Home(){
+const {Mycontext, setMycontext} = useContext(MyContext)
 
-    const {Mycontext, setMycontext} = useContext(MyContext)
+useEffect(()=>{
+  setMycontext({...Mycontext, sidebarState:false, cartState:false})
+  document.body.style.overflow = ''
+  FirstScroll()
+},[])
 
-    useEffect(()=>{
-      setMycontext({...Mycontext, sidebarState:false, cartState:false})
-      document.body.style.overflow = ''
-      FirstScroll()
-    },[])
-
-    return (
+const Home=()=>(
         <div className="w-full h-full flex flex-col">
             <HomeCollection />
             <HomeProductList />
         </div>
     )
-}
 
-export default Home;
+// export default Home;
+render(<Home />, document.getElementById('App'))
