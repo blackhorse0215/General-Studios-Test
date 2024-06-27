@@ -11,7 +11,7 @@ function ScrollBar(){
 
         const handleScroll = () => {
             const scroll = window.scrollY || document.documentElement.scrollTop
-            setScrollTop(scroll * document.querySelector('#srcollTopBar').offsetHeight / (document.querySelector('#app').offsetHeight - window.innerHeight))
+            setScrollTop(scroll * document.querySelector('#srcollTopBar').offsetHeight / (document.querySelector('#app')?document.querySelector('#app').offsetHeight:document.querySelector('#app-faq').offsetHeight - window.innerHeight))
         };
 
         handleScroll()
