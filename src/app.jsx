@@ -1,4 +1,4 @@
-import { createContext, render } from 'preact';
+import { createContext } from 'preact';
 import { useEffect, useState } from 'preact/hooks'
 import Router from 'preact-router';
 import { Link } from 'preact-router';
@@ -7,9 +7,8 @@ import FAQ from './pages/FAQ';
 import Sidebar from './components/Sidebar';
 import MyContext from './context/Mycontext';
 import {createCheckoutSession} from './utils/createCheckoutID'
-import './index.css'
 
-function App() {
+export function App() {
 
   const [Mycontext, setMycontext] = useState({HomeProductId:'', faqCurrent:1, HomeproColor:'', HomeproSize:'', sidebarState:false, cartState:false, getDataState:''})
 
@@ -29,14 +28,12 @@ function App() {
         </Link>
       </div>
       <MyContext.Provider value={{Mycontext, setMycontext}}>
-        {/* <Router> */}
-          <Home />
-          {/* <FAQ path='/faq'/> */}
-        {/* </Router> */}
+        <Router>
+          <Home path='/'/>
+          <FAQ path='/faq'/>
+        </Router>
         <Sidebar/>
       </MyContext.Provider>
     </>
   )
 }
-
-render(<App />, document.getElementById('Home'))
