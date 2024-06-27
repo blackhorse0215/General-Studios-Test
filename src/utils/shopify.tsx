@@ -185,6 +185,7 @@ export const fetchFAQData = async () => {
 
 type Checkout = {
   id: string;
+  webUrl:string;
   lineItems: {
     edges: {
       node: {
@@ -219,6 +220,7 @@ export const addProductToCheckout = async (
       checkoutLineItemsAdd(checkoutId: $checkoutId, lineItems: $lineItems) {
         checkout {
           id
+          webUrl
           lineItems(first: 250) {
             edges {
               node {
@@ -255,9 +257,12 @@ export const addProductToCheckout = async (
       'X-Shopify-Storefront-Access-Token': `${STOREFRONT_ACCESS_TOKEN}`,
     },
     body: JSON.stringify({ query, variables }),
+
   });
 
   const data: AddProductToCheckoutResponse = await response.json();
+  console.log(data);
+  
   return data.data.checkoutLineItemsAdd.checkout;
 };
 
