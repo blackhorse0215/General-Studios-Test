@@ -2,7 +2,7 @@ import { h, render } from 'preact';
 import { useState, useEffect, useContext } from 'preact/hooks';
 import MyContext from '../../context/Mycontext';
 
-function ScrollBar(){
+function ScrollBarFAQ(){
 
     const {Mycontext, setMycontext} = useContext(MyContext)
     const [scrollTop, setScrollTop] = useState(0)
@@ -11,7 +11,7 @@ function ScrollBar(){
 
         const handleScroll = () => {
             const scroll = window.scrollY || document.documentElement.scrollTop
-            setScrollTop(scroll * document.querySelector('#srcollTopBar').offsetHeight / (document.querySelector('#app').offsetHeight - window.innerHeight))
+            setScrollTop(scroll * document.querySelector('#srcollTopBar').offsetHeight / (document.querySelector('#app-faq').offsetHeight - window.innerHeight))
         };
 
         handleScroll()
@@ -31,4 +31,4 @@ function ScrollBar(){
     )
 }
 
-export default ScrollBar;
+export default ScrollBarFAQ;
