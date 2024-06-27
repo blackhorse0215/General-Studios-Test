@@ -6,20 +6,22 @@ import { FirstScroll } from '../script/FirstScroll';
 import MyContext from '../context/Mycontext';
 import '../index.css'
 
-const {Mycontext, setMycontext} = useContext(MyContext)
+const Home=()=>{
 
-useEffect(()=>{
-  setMycontext({...Mycontext, sidebarState:false, cartState:false})
-  document.body.style.overflow = ''
-  FirstScroll()
-},[])
+    const {Mycontext, setMycontext} = useContext(MyContext)
 
-const Home=()=>(
+    useEffect(()=>{
+      setMycontext({...Mycontext, sidebarState:false, cartState:false})
+      document.body.style.overflow = ''
+      FirstScroll()
+    },[])
+
+    return (
         <div className="w-full h-full flex flex-col">
             <HomeCollection />
             <HomeProductList />
         </div>
     )
+}
 
-// export default Home;
-render(<Home />, document.getElementById('App'))
+export default Home

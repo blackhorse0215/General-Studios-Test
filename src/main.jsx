@@ -6,4 +6,4 @@ const Main=()=>(
         <div>sdfskfkfk</div>
 )
 
-render(<Main />, document.getElementById('App'))
+// render(<Main />, document.getElementById('App'))

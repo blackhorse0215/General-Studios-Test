@@ -1,4 +1,4 @@
-import { createContext } from 'preact';
+import { createContext, render } from 'preact';
 import { useEffect, useState } from 'preact/hooks'
 import Router from 'preact-router';
 import { Link } from 'preact-router';
@@ -7,6 +7,7 @@ import FAQ from './pages/FAQ';
 import Sidebar from './components/Sidebar';
 import MyContext from './context/Mycontext';
 import {createCheckoutSession} from './utils/createCheckoutID'
+import './index.css'
 
 function App() {
 
@@ -28,14 +29,11 @@ function App() {
         </Link>
       </div>
       <MyContext.Provider value={{Mycontext, setMycontext}}>
-        <Router>
-          <Home path='/'/>
-          <FAQ path='/faq'/>
-        </Router>
+        <Home/>
         <Sidebar/>
       </MyContext.Provider>
     </>
   )
 }
 
-export default App
+render(<App />, document.getElementById('App'))
