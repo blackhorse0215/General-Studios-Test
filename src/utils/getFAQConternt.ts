@@ -6,8 +6,13 @@ interface FAQPage {
     body: string; // Assuming body is HTML content
     id: string;
     title: string;
+    metafields: Metafield[];
   }
-  
+  interface Metafield {
+    namespace: string;
+    key: string;
+    value: JSON;
+  }
 interface pageByHandles {
     pageByHandle: FAQPage;
 }
@@ -20,6 +25,13 @@ interface pageByHandles {
             id
             title
             body
+            metafields(identifiers: [
+              { namespace: "custom", key: "faq" }
+            ]) {
+              namespace
+              key
+              value
+            }
           }
         }
       `;
@@ -34,7 +46,6 @@ interface pageByHandles {
       });
   
       const data = await response.json();
-      console.log(data);
       
   
       if (data.errors) {

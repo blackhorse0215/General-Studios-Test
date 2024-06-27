@@ -9,6 +9,7 @@ import {fetchFAQPageContent} from '../utils/getFAQConternt'
 function FAQ(){
 
     const {Mycontext, setMycontext} = useContext(MyContext)
+    const [data, setData] = useState([])
 
     useEffect(()=>{
       setMycontext({...Mycontext, sidebarState:false, cartState:false})
@@ -17,7 +18,7 @@ function FAQ(){
       try{
         fetchFAQPageContent('faq')
         .then((data)=>{
-          console.log("faq",data.data.pageByHandle);
+          setData(JSON.parse(data.data.pageByHandle.metafields[0].value))
         })
         .catch((err)=>{
           console.log(err);
@@ -49,8 +50,8 @@ function FAQ(){
         <div className="grid grid-cols-10 h-full pr-70px max-lg:grid-cols-2 max-md:pr-0">
             <div className="col-span-1 max-lg:col-span-0"></div>
             <div className="grid grid-cols-custom col-span-9 max-lg:col-span-2 max-md:block max-md:w-full">
-                <FAQsidebar />
-                <FAQcontent />
+                <FAQsidebar data={data} />
+                <FAQcontent data={data} />
             </div>
         </div>
     )

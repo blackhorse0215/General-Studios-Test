@@ -19,6 +19,16 @@ interface ProductsResponse {
   };
 }
 
+interface MetafieldNode {
+  namespace: string;
+  key: string;
+  value: string;
+}
+
+interface MetafieldEdge {
+  node: MetafieldNode;
+}
+
 async function fetchShopify<T>(query: string, variables: Record<string, any> = {}): Promise<T> {
   const response = await fetch(`${SHOPIFY_STORE_URL}/api/2024-04/graphql.json`, {
     method: 'POST',
@@ -78,6 +88,13 @@ interface ProductDetailsNode {
   variants: {
     edges: { node: ProductVariant }[];
   };
+  metafields: Metafield[];
+}
+
+interface Metafield {
+  namespace: string;
+  key: string;
+  value: string;
 }
 
 interface ProductResponse {
@@ -126,6 +143,13 @@ export async function getProductDetails(productId: string): Promise<ProductDetai
               }
             }
           }
+        }
+        metafields(identifiers: [
+          { namespace: "custom", key: "video_url" }
+        ]) {
+          namespace
+          key
+          value
         }
       }
     }
