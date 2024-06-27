@@ -4,7 +4,7 @@ import Router from 'preact-router';
 import { Link } from 'preact-router';
 import Home from './pages/Home';
 import FAQ from './pages/FAQ';
-import ScrollBarFAQ from './webcomponents/Sidebar/SidebarFAQ';
+import SidebarFAQ from './components/SidebarFAQ';
 import MyContext from './context/Mycontext';
 import {createCheckoutSession} from './utils/createCheckoutID'
 
@@ -34,7 +34,7 @@ export function AppFAQ() {
           {/* <NotFound default /> */}
           {/* <Redirect path="/" to="/home" /> */}
         {/* </Router> */}
-        <ScrollBarFAQ/>
+        <SidebarFAQ/>
       </MyContext.Provider>
     </>
   )
