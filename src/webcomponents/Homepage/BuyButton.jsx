@@ -29,7 +29,7 @@ function BuyButton(data){
     }
 
     useEffect(()=>{
-        setValue(data)
+        setValue(data?.val?.state)
     },[data])
 
     return (
