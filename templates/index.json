@@ -13,9 +13,48 @@
       "type": "preact-home",
       "settings": {
       }
+    },
+    "collage_8UPKpH": {
+      "type": "collage",
+      "blocks": {
+        "image_fDfCyP": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "product_PYQUXk": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection_PVE6GP": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_fDfCyP",
+        "product_PYQUXk",
+        "collection_PVE6GP"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "preact_home_VdFFiW"
+    "preact_home_VdFFiW",
+    "collage_8UPKpH"
   ]
 }
