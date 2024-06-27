@@ -10,10 +10,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: 'src/pages/Home.jsx',
+      input: 'src/main.jsx',
       output: {
-        entryFileNames: 'home.js',
-        assetFileNames: 'hometailwind.css',
+        entryFileNames: 'main.js',
+        assetFileNames: 'tailwind.css',
       }
     }
   },
