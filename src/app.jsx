@@ -8,7 +8,7 @@ import Sidebar from './components/Sidebar';
 import MyContext from './context/Mycontext';
 import {createCheckoutSession} from './utils/createCheckoutID'
 
-export function App() {
+function App() {
 
   const [Mycontext, setMycontext] = useState({HomeProductId:'', faqCurrent:1, HomeproColor:'', HomeproSize:'', sidebarState:false, cartState:false, getDataState:''})
 
@@ -37,3 +37,5 @@ export function App() {
     </>
   )
 }
+
+export default App
