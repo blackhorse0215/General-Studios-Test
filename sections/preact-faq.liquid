@@ -1,0 +1,24 @@
+<link href="{{ 'faqtailwind.css' | asset_url }}" rel="stylesheet">
+
+<div id="preact-faq"></div>
+<script src="{{ 'faq.js' | asset_url }}"></script>
+{% schema %}
+{
+  "name": "Preact FAQ",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "example_text",
+      "label": "Example Text",
+      "default": "Hello, Preact!"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Preact FAQ"
+    }
+  ]
+}
+{% endschema %}

@@ -5,6 +5,7 @@ import FAQcontent from '../components/FAQcontent';
 import MyContext from '../context/Mycontext';
 import { FirstScroll } from '../script/FirstScroll';
 import {fetchFAQPageContent} from '../utils/getFAQConternt'
+import '../index.css'
 
 function FAQ(){
 
