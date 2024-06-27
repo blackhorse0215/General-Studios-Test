@@ -1,4 +1,4 @@
-import { createContext } from 'preact';
+import { h, render } from 'preact';
 import { useEffect, useState } from 'preact/hooks'
 import Router from 'preact-router';
 import { Link } from 'preact-router';
@@ -31,6 +31,8 @@ export function App() {
         <Router>
           <Home path='/'/>
           <FAQ path='/faq'/>
+          {/* <NotFound default /> */}
+          {/* <Redirect path="/" to="/home" /> */}
         </Router>
         <Sidebar/>
       </MyContext.Provider>
