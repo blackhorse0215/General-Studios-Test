@@ -22,11 +22,12 @@ function ProductCartBar(Cart){
         Mycontext.cartState == false ? setMycontext({...Mycontext, cartState:true}) : setMycontext({...Mycontext, cartState:false})
     }
 
-    useEffect(()=>{
+    const toCheckout=()=>{
         try{
             createCheckoutUrl()
             .then((res)=>{
-                setCheckurl(res)
+                // setCheckurl(res)
+                window.location.replace(res)
             })
             .catch((err)=>{
                 console.log(err);
@@ -35,7 +36,7 @@ function ProductCartBar(Cart){
         catch{
             console.log('error');
         }
-    },[])
+    }
 
     useEffect(()=>{
         var to = 0;
@@ -72,7 +73,7 @@ function ProductCartBar(Cart){
                 </div>
             </div>
             <div className="flex flex-col gap-20px">
-                <a target="_blank" href={`${checkUrl}`} className="h-60px w-full bg-black flex justify-center items-center text-28px text-white">Procced to checkout</a>
+                <button onClick={toCheckout} className="h-60px w-full bg-black flex justify-center items-center text-28px text-white">Procced to checkout</button>
                 <button onClick={showCartContent} className="h-60px w-full bg-white text-28px">Contiue shipping</button>
             </div>
         </div>
