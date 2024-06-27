@@ -24,4 +24,4 @@ const Home=()=>{
     )
 }
 
-render(Home, document.getElementById('preact-home'))
+render(<Home/>, document.getElementById('preact-home'))
