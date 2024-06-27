@@ -19,6 +19,7 @@ function HomeProductItem({id}){
     const [array, setArray] = useState([]);
     const [showproductId, setProductId] = useState(false)
     const [video, setVideo] = useState('')
+    const [avilable, setAvila] = useState(false)
 
     const showDetails=()=>{
         setMycontext({...Mycontext, HomeProductId:''}) 
@@ -74,6 +75,12 @@ function HomeProductItem({id}){
             if(Size == [] && k == true){
                 console.log(item.id);
                 setId(item.id)
+                if(item.availableForSale == true){
+                    setAvila(true)
+                }
+                else{
+                    setAvila(false)
+                }
                 return
             }
             else{
@@ -85,6 +92,12 @@ function HomeProductItem({id}){
             }
             if(k == true && l == true){
                 setId(item.id)
+                if(item.availableForSale == true){
+                    setAvila(true)
+                }
+                else{
+                    setAvila(false)
+                }
                 return;
             }
         })
@@ -146,7 +159,7 @@ function HomeProductItem({id}){
                             </div>
                             <p className="flex items-center">{productDetails.variants ? getSymbolFromCurrency(productDetails.variants.edges[0].node.price.currencyCode.toUpperCase()):''}{productDetails.variants ? productDetails.variants.edges[0].node.price.amount:''}</p>
                         </div>
-                        <BuyButton id={Id} />
+                        <BuyButton val={{id:Id, state:avilable}} />
                     </div>
                 </div>
             </div>
