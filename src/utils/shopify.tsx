@@ -82,6 +82,7 @@ interface ProductDetailsNode {
   id: string;
   title: string;
   descriptionHtml: string;
+  availableForSale: number
   media: {
     edges: ProductImage[];
   };
@@ -108,6 +109,7 @@ export async function getProductDetails(productId: string): Promise<ProductDetai
         id
         title
         descriptionHtml
+        availableForSale
         media(first: 10) {
           edges {
             node {
@@ -156,6 +158,8 @@ export async function getProductDetails(productId: string): Promise<ProductDetai
   `;
   const variables = { id: productId };
   const data = await fetchShopify<ProductResponse>(query, variables);
+  console.log(data);
+  
   return data.product;
 }
 
