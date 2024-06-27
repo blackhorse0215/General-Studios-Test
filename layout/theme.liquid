@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
+    <link href="{{ 'hometailwind.css' | asset_url }}" rel="stylesheet">
   </head>
   <body>
     <div style="display:none">
       {{content_for_header}}
       </div>
-      <div id="preact-logo"></div>
+      <div id="preact-home"></div>
       {{content_for_layout}}
+      <script src="{{ 'home.js' | asset_url }}"></script>
   </body>
   </html>
   

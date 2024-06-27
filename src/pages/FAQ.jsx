@@ -7,7 +7,7 @@ import { FirstScroll } from '../script/FirstScroll';
 import {fetchFAQPageContent} from '../utils/getFAQConternt'
 import '../index.css'
 
-function FAQ(){
+const FAQ=()=>{
 
     const {Mycontext, setMycontext} = useContext(MyContext)
     const [data, setData] = useState([])
@@ -58,4 +58,4 @@ function FAQ(){
     )
 }
 
-export default FAQ;
+render(<FAQ/>, document.getElementById('preact-faq'))
