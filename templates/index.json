@@ -9,22 +9,22 @@
 */
 {
   "sections": {
-    "collection_list_87AepP": {
+    "collection_list_RhbFt3": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_WYk4mB": {
+        "featured_collection_pj7GAw": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         },
-        "featured_collection_yzzY93": {
+        "featured_collection_cPL73b": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         },
-        "featured_collection_YpRpqm": {
+        "featured_collection_RaFmQi": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
@@ -32,9 +32,9 @@
         }
       },
       "block_order": [
-        "featured_collection_WYk4mB",
-        "featured_collection_yzzY93",
-        "featured_collection_YpRpqm"
+        "featured_collection_pj7GAw",
+        "featured_collection_cPL73b",
+        "featured_collection_RaFmQi"
       ],
       "settings": {
         "title": "Collections",
@@ -51,6 +51,6 @@
     }
   },
   "order": [
-    "collection_list_87AepP"
+    "collection_list_RhbFt3"
   ]
 }
