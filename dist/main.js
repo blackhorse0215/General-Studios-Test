@@ -14,7 +14,6 @@ var ud,_,be,H,ee,Se,Sd,Md,Vd,Id,Ve,td={},Ie=[],ra=/acit|ex(?:s|g|n|p|$)|rph|grid
         id
         title
         descriptionHtml
-        availableForSale
         media(first: 10) {
           edges {
             node {
@@ -39,6 +38,7 @@ var ud,_,be,H,ee,Se,Sd,Md,Vd,Id,Ve,td={},Ie=[],ra=/acit|ex(?:s|g|n|p|$)|rph|grid
             node {
               id
               title
+              availableForSale
               price {
                 amount
                 currencyCode
