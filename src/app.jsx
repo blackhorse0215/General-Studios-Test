@@ -4,6 +4,7 @@ import Router from 'preact-router';
 import { Link } from 'preact-router';
 import Home from './pages/Home';
 import FAQ from './pages/FAQ';
+import Sidebar from './components/Sidebar';
 import MyContext from './context/Mycontext';
 import {createCheckoutSession} from './utils/createCheckoutID'
 
