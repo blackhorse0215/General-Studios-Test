@@ -6,10 +6,10 @@ import MyContext from '../../context/Mycontext';
 function BuyButton(data){
 
     const {Mycontext, setMycontext} = useContext(MyContext)
-    const [value, setValue] = useState(false)
+    const [Value, setValue] = useState(false)
 
     const addCart= async ()=>{
-        if(value == false){
+        if(Value == false){
             return
         }
         const checkid = localStorage.getItem('checkoutID');
@@ -33,7 +33,7 @@ function BuyButton(data){
     },[data])
 
     return (
-        <button onClick={addCart} value={data.val.id} className={`mt-20px ${value.val.state == true ? 'bg-black' : 'bg-gray-500'} w-full h-60px flex items-center justify-center text-21px text-white`}>Buy now</button>
+        <button onClick={addCart} value={data.val.id} className={`mt-20px ${Value == true ? 'bg-black' : 'bg-gray-500'} w-full h-60px flex items-center justify-center text-21px text-white`}>Buy now</button>
     )
 }
 
