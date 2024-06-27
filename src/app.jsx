@@ -33,6 +33,7 @@ export function App() {
           {/* <NotFound default /> */}
           {/* <Redirect path="/" to="/home" /> */}
         {/* </Router> */}
+        <Sidebar/>
       </MyContext.Provider>
     </>
   )

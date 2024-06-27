@@ -26,7 +26,7 @@ function MenuBar(){
                 <div>
                     <p className="text-28px"><a href="/">Shop</a></p>
                     <p className="text-28px"><a href=''>Affliates</a></p>
-                    <p className="text-28px"><a href="/faq">FAQ</a></p>
+                    <p className="text-28px"><a href="/pages/faq">FAQ</a></p>
                 </div>
             </div>
             <div>
