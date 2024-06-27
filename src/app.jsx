@@ -29,7 +29,10 @@ function App() {
         </Link>
       </div>
       <MyContext.Provider value={{Mycontext, setMycontext}}>
-        <Home/>
+        {/* <Router> */}
+          <Home />
+          {/* <FAQ path='/faq'/> */}
+        {/* </Router> */}
         <Sidebar/>
       </MyContext.Provider>
     </>

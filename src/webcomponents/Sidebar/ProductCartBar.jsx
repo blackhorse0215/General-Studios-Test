@@ -26,8 +26,8 @@ function ProductCartBar(Cart){
         try{
             createCheckoutUrl()
             .then((res)=>{
-                // setCheckurl(res)
-                window.location.replace(res)
+                console.log(res);
+                window.location.replace(res);
             })
             .catch((err)=>{
                 console.log(err);
