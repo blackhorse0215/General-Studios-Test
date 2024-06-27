@@ -73,7 +73,7 @@ function ProductCartBar(Cart){
                 </div>
             </div>
             <div className="flex flex-col gap-20px">
-                <button type="submit" id="CartDrawer-Checkout" form="CartDrawer-Form" className="h-60px w-full bg-black flex justify-center items-center text-28px text-white cart__checkout-button button">Procced to checkout</button>
+                <button onClick={toCheckout} className="h-60px w-full bg-black flex justify-center items-center text-28px text-white">Procced to checkout</button>
                 <button onClick={showCartContent} className="h-60px w-full bg-white text-28px">Contiue shipping</button>
             </div>
         </div>
