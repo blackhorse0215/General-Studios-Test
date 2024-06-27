@@ -1,5 +1,9 @@
 import { render } from 'preact'
-import App  from './app'
+// import App  from './app'
 import './index.css'
 
-render(<App />, document.getElementById('App'))
+const ks=()=>(
+        <div>sdfskfkfk</div>
+)
+
+render(ks, document.getElementById('App'))
