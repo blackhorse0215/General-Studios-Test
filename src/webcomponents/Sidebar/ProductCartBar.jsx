@@ -23,18 +23,9 @@ function ProductCartBar(Cart){
     }
 
     const toCheckout=()=>{
-        try{
-            createCheckoutUrl()
-            .then((res)=>{
-                console.log(res);
-                window.location.replace(res);
-            })
-            .catch((err)=>{
-                console.log(err);
-            })
-        }
-        catch{
-            console.log('error');
+        const url = localStorage.getItem('checkoutUrl');
+        if(url){
+            window.location.replace(url)
         }
     }
 
