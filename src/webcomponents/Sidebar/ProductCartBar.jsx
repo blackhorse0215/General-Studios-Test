@@ -33,7 +33,7 @@ function ProductCartBar(Cart){
     },[Cart])
 
     return(
-        <div className={`transform ${Mycontext.cartState == false ? `translate-x-70px max-lg:translate-x-100vw` : `translate-x-[50vw]  max-lg:translate-x-0`} overflow-auto max-lg:w-full w-50vw flex flex-col justify-between p-30px fixed h-full top-0 bg-white border-solid border border-black transition-all duration-200 ease`}>
+        <div className={`transform ${Mycontext.cartState == false ? `translate-x-70px max-lg:translate-x-100vw` : `translate-x-[50vw]  max-lg:translate-x-0`} overflow-auto max-lg:w-full w-50vw flex flex-col justify-between p-30px fixed h-full top-0 bg-white border-solid border border-black transition-all duration-500 ease`}>
             <div className="flex flex-col w-full">
                 <div className="flex justify-between border-b border-solid border-black pb-10px">
                     <h1 className="text-28px">Cart</h1>

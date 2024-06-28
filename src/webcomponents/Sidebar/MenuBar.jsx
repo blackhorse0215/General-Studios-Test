@@ -17,10 +17,10 @@ function MenuBar(){
     }
 
     return(
-        <div className={`transform ${Mycontext.sidebarState == false ? `translate-x-70px max-lg:translate-x-100vw` : `translate-x-[50vw] max-lg:translate-x-0`} max-lg:w-full w-50vw flex flex-col justify-between p-30px fixed h-full top-0 bg-white border-solid border border-black transition-all duration-200 ease`}>
+        <div className={`transform ${Mycontext.sidebarState == false ? `translate-x-70px max-lg:translate-x-100vw` : `translate-x-[50vw] max-lg:translate-x-0`} max-lg:w-full w-50vw flex flex-col justify-between p-30px fixed h-full top-0 bg-white border-solid border border-black transition-all duration-500 ease`}>
             <div>
                 <div className="flex justify-between">
-                    <p className="bg-black text-white text-28px w-52px mb-30px">Info</p>
+                    <p className="text-gray-400 text-28px w-52px mb-30px">Info</p>
                     <p onClick={showContent}>Close</p>
                 </div>
                 <div>
