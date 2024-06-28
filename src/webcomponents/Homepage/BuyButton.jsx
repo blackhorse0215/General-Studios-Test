@@ -28,7 +28,7 @@ function BuyButton({id}){
     }
 
     return (
-        <button onClick={addCart} value={id} className={`mt-20px ${Mycontext.buttonState == true ? 'bg-black' : 'bg-gray-500'} w-full h-60px flex items-center justify-center text-21px text-white`}>Buy now</button>
+        <button onClick={addCart} value={id} className={`mt-20px ${Mycontext.buttonState == true ? 'bg-black cursor-pointer' : 'bg-gray-500 cursor-not-allowed'} w-full h-60px flex items-center justify-center text-21px text-white`}>Buy now</button>
     )
 }
 
