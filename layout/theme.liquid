@@ -15,10 +15,7 @@
       <div id="sdkfflsdf">
       {{content_for_layout}}
       </div>
-
-      {%- if settings.cart_type == 'drawer' -%}
-        {%- render 'cart-drawer' -%}
-      {%- endif -%}
+      
 
       <script>
         window.shopUrl = '{{ request.origin }}';
