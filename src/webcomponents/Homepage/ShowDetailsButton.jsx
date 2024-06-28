@@ -11,7 +11,7 @@ function ShowDetailsButton({id}){
             document.getElementById(`${id}`).scrollIntoView({behavior:'smooth'})
         }
         setTimeout(() => {
-            Mycontext.HomeProductId == id ? setMycontext({...Mycontext, HomeProductId:''}) : setMycontext({...Mycontext, HomeProductId:id})
+            Mycontext.HomeProductId == id ? setMycontext({...Mycontext, HomeProductId:'', HomeproColor:'', HomeproSize:'', buttonState:false}) : setMycontext({...Mycontext, HomeProductId:id, HomeproColor:'', HomeproSize:'', buttonState:false})
         }, 500);
     }
 

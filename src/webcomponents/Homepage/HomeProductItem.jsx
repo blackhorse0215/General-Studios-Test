@@ -51,7 +51,7 @@ function HomeProductItem({id}){
                 setSize(size);
                 setColor(color);
                 datas.variants.edges.map((item)=>{
-                    array.push({id:item.node.id, options:item.node.selectedOptions})
+                    array.push({id:item.node.id, options:item.node.selectedOptions, availableForSale:item.node.availableForSale})
                 })
             })
             .catch((err)=>{
@@ -77,12 +77,12 @@ function HomeProductItem({id}){
                 setId(item.id)
                 console.log(item.id);
                 console.log(item);
-                // if(item.availableForSale == true){
-                //     setMycontext({...Mycontext, buttonState:true})
-                // }
-                // else{
-                //     setMycontext({...Mycontext, buttonState:false})
-                // }
+                if(item.availableForSale == true){
+                    setMycontext({...Mycontext, buttonState:true})
+                }
+                else{
+                    setMycontext({...Mycontext, buttonState:false})
+                }
                 return
             }
             else{
@@ -96,12 +96,12 @@ function HomeProductItem({id}){
                 setId(item.id)
                 console.log(item.id);
                 console.log(item);
-                // if(item.availableForSale == true){
-                //     setMycontext({...Mycontext, buttonState:true})
-                // }
-                // else{
-                //     setMycontext({...Mycontext, buttonState:false})
-                // }
+                if(item.availableForSale == true){
+                    setMycontext({...Mycontext, buttonState:true})
+                }
+                else{
+                    setMycontext({...Mycontext, buttonState:false})
+                }
                 return;
             }
         })
