@@ -19,7 +19,6 @@ function HomeProductItem({id}){
     const [array, setArray] = useState([]);
     const [showproductId, setProductId] = useState(false)
     const [video, setVideo] = useState('')
-    const [avilable, setAvila] = useState(false)
 
     const showDetails=()=>{
         setMycontext({...Mycontext, HomeProductId:''}) 
@@ -73,10 +72,6 @@ function HomeProductItem({id}){
                 }
             })
             if(Size == [] && k == true){
-                console.log(item.id);
-                setId(item.id)
-                console.log(item.id);
-                console.log(item);
                 if(item.availableForSale == true){
                     setMycontext({...Mycontext, buttonState:true})
                 }
@@ -94,8 +89,6 @@ function HomeProductItem({id}){
             }
             if(k == true && l == true){
                 setId(item.id)
-                console.log(item.id);
-                console.log(item);
                 if(item.availableForSale == true){
                     setMycontext({...Mycontext, buttonState:true})
                 }

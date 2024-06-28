@@ -62,9 +62,12 @@ function Sidebar(){
     return (
         <>
             <div className="flex flex-col fixed h-full w-70px right-0 top-0 bg-black z-20 max-lg:h-70px max-lg:flex-row max-lg:w-full max-lg:justify-end">
-                <div onClick={showCartContent} className="flex justify-center items-center w-70px h-70px">
-                   <ShopCartIcon/>
-                </div>
+                {
+                    Cart ? 
+                    <div onClick={showCartContent} className="flex justify-center items-center w-70px h-70px">
+                        <ShopCartIcon/>
+                    </div> : <></>
+                }
                 <div onClick={showContent} className="flex justify-center items-center w-70px h-70px bg-gray-300 max-lg:bg-black">
                     <MenuIcon/>
                 </div>

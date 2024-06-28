@@ -16,8 +16,6 @@ function ScrollBar(){
 
         handleScroll()
 
-        console.log(Mycontext.sidebarState);
-
         window.addEventListener('scroll', handleScroll);
 
       }, []);

@@ -1,9 +1,6 @@
 const SHOPIFY_STORE_URL = import.meta.env.VITE_SHOPIFY_STORE_URL;
 const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN;
 
-console.log();
-
-
 interface ShopifyResponse<T> {
   data?: T;
   errors?: { message: string }[];
@@ -158,8 +155,6 @@ export async function getProductDetails(productId: string): Promise<ProductDetai
   `;
   const variables = { id: productId };
   const data = await fetchShopify<ProductResponse>(query, variables);
-  console.log(data);
-  
   return data.product;
 }
 
