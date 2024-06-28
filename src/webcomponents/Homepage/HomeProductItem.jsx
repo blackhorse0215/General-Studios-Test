@@ -75,7 +75,8 @@ function HomeProductItem({id}){
             if(Size == [] && k == true){
                 console.log(item.id);
                 setId(item.id)
-                console.log(item.availableForSale);
+                console.log(item.id);
+                console.log(item);
                 // if(item.availableForSale == true){
                 //     setMycontext({...Mycontext, buttonState:true})
                 // }
@@ -93,7 +94,8 @@ function HomeProductItem({id}){
             }
             if(k == true && l == true){
                 setId(item.id)
-                console.log(item.availableForSale);
+                console.log(item.id);
+                console.log(item);
                 // if(item.availableForSale == true){
                 //     setMycontext({...Mycontext, buttonState:true})
                 // }
