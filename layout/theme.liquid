@@ -16,7 +16,9 @@
       {{content_for_layout}}
       </div>
       
+      {{ 'base.css' | asset_url | stylesheet_tag }}
 
+      
       <script>
         window.shopUrl = '{{ request.origin }}';
         window.routes = {
