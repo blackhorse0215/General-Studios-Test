@@ -76,10 +76,10 @@ function HomeProductItem({id}){
                 console.log(item.id);
                 setId(item.id)
                 if(item.availableForSale == true){
-                    setAvila(true)
+                    setMycontext({...Mycontext, buttonState:true})
                 }
                 else{
-                    setAvila(false)
+                    setMycontext({...Mycontext, buttonState:false})
                 }
                 return
             }
@@ -93,10 +93,10 @@ function HomeProductItem({id}){
             if(k == true && l == true){
                 setId(item.id)
                 if(item.availableForSale == true){
-                    setAvila(true)
+                    setMycontext({...Mycontext, buttonState:true})
                 }
                 else{
-                    setAvila(false)
+                    setMycontext({...Mycontext, buttonState:false})
                 }
                 return;
             }
@@ -159,7 +159,7 @@ function HomeProductItem({id}){
                             </div>
                             <p className="flex items-center">{productDetails.variants ? getSymbolFromCurrency(productDetails.variants.edges[0].node.price.currencyCode.toUpperCase()):''}{productDetails.variants ? productDetails.variants.edges[0].node.price.amount:''}</p>
                         </div>
-                        <BuyButton val={{id:Id, state:avilable}} />
+                        <BuyButton id={Id} />
                     </div>
                 </div>
             </div>

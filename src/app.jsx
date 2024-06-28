@@ -10,7 +10,7 @@ import {createCheckoutSession} from './utils/createCheckoutID'
 
 export function App() {
 
-  const [Mycontext, setMycontext] = useState({HomeProductId:'', faqCurrent:1, HomeproColor:'', HomeproSize:'', sidebarState:false, cartState:false, getDataState:''})
+  const [Mycontext, setMycontext] = useState({HomeProductId:'', faqCurrent:1, HomeproColor:'', HomeproSize:'', sidebarState:false, cartState:false, getDataState:'', buttonState:false})
 
   useEffect(()=>{
     createCheckoutSession();
