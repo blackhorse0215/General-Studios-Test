@@ -14,18 +14,16 @@ function FAQcontentItem(data){
     },[data])
 
     return (
-        <div className={`border-b border-solid border-black h-auto max-md:pt-5px  transition-all duration-500 ease`}>
-            <h1 onClick={show} className="text-28px cursor-pointer max-md:text-19px hover:text-customGray mt-2px">{quetion}</h1>
-            <div className={`${answerState == true ? "h-0 mt-0" : 'h-full mt-8'} overflow-hidden text-28px text-customGray mb-6px max-md:text-19px transition-all duration-500 ease`}>
+        <div id="faq_content_item" className="flex flex-col">
+            <h1 className="text-28px pb-40px border-b border-black border-solid max-md:text-19px max-md:pb-30px">{topic}</h1>
+            <div className="flex flex-col">
                 {
-                    answer.map((item, index)=>(
-                        <>
-                            <p className='leading-9  transition-all duration-500 ease'>{item}</p><br />
-                        </>
+                    content.map((item, index)=>(
+                        <FAQcontentItemAnswer value={item} />
                     ))
                 }
             </div>
-        </div>   
+        </div>
     )
 }
 
