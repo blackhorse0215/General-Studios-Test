@@ -12,8 +12,8 @@ export default defineConfig({
     rollupOptions: {
       input: 'src/main.jsx',
       output: {
-        entryFileNames: 'main.js',
-        assetFileNames: 'tailwind.css',
+        entryFileNames: 'mainFAQ.js',
+        assetFileNames: 'FAQtailwind.css',
       }
     }
   },
