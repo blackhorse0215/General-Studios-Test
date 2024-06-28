@@ -1,5 +1,5 @@
-const SHOPIFY_STORE_URL = 'https://blackhorsedev.myshopify.com';
-const STOREFRONT_ACCESS_TOKEN = '7db2a4b955ecffa57c65e91ff17893ae';
+const SHOPIFY_STORE_URL = import.meta.env.VITE_SHOPIFY_STORE_URL;
+const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN;
 
 interface RemoveProductProps {
   checkoutId: string;

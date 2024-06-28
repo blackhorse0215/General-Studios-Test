@@ -1,8 +1,8 @@
 import Client from 'shopify-buy';
 
 const client = Client.buildClient({
-    storefrontAccessToken: '7db2a4b955ecffa57c65e91ff17893ae',
-    domain: 'blackhorsedev.myshopify.com',
+    storefrontAccessToken: import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN,
+    domain: import.meta.env.VITE_SHOPIFY_STORE_URL,
   });
   
   // Example usage:

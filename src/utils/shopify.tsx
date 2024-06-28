@@ -1,6 +1,3 @@
-import { gql } from "graphql-request";
-import client from "../shopifyClient";
-
 const SHOPIFY_STORE_URL = import.meta.env.VITE_SHOPIFY_STORE_URL;
 const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN;
 

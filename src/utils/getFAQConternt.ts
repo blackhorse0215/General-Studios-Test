@@ -1,6 +1,5 @@
-const endpoint = 'https://blackhorsedev.myshopify.com/api/2024-04/graphql';
-const storefrontAccessToken = '7db2a4b955ecffa57c65e91ff17893ae';
-
+const SHOPIFY_STORE_URL = import.meta.env.VITE_SHOPIFY_STORE_URL;
+const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN;
 
 interface FAQPage {
     body: string; // Assuming body is HTML content
@@ -36,11 +35,11 @@ interface pageByHandles {
         }
       `;
   
-      const response = await fetch(endpoint, {
+      const response = await fetch(`${SHOPIFY_STORE_URL}/api/2024-04/graphql`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Shopify-Storefront-Access-Token': storefrontAccessToken,
+          'X-Shopify-Storefront-Access-Token': STOREFRONT_ACCESS_TOKEN,
         },
         body: JSON.stringify({ query }),
       });

@@ -1,8 +1,8 @@
 import Client, { Checkout } from 'shopify-buy';
 
 const client = Client.buildClient({
-    domain: 'blackhorsedev.myshopify.com', // Replace with your Shopify store domain
-    storefrontAccessToken: '7db2a4b955ecffa57c65e91ff17893ae' // Replace with your Storefront API access token
+    domain: import.meta.env.VITE_SHOPIFY_STORE_URL, // Replace with your Shopify store domain
+    storefrontAccessToken: import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN // Replace with your Storefront API access token
 });
 
 export const createCheckoutUrl = async () => {

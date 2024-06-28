@@ -25,10 +25,6 @@ function HomeProductList(){
         }
     },[])
 
-    // useEffect(()=>{
-    //     Mycontext.HomeProductId != '' ? document.body.style.overflow = 'hidden' : document.body.style.overflow = ''
-    // },[Mycontext.HomeProductId])
-
     return (
         <div className="flex flex-col pr-70px max-lg:pr-0">
             {

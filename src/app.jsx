@@ -28,12 +28,7 @@ export function App() {
         </Link>
       </div>
       <MyContext.Provider value={{Mycontext, setMycontext}}>
-        {/* <Router> */}
           <Home />
-          {/* <FAQ path='/faq'/> */}
-          {/* <NotFound default /> */}
-          {/* <Redirect path="/" to="/home" /> */}
-        {/* </Router> */}
         <Sidebar/>
       </MyContext.Provider>
     </>

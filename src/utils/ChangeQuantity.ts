@@ -1,3 +1,6 @@
+const SHOPIFY_STORE_URL = import.meta.env.VITE_SHOPIFY_STORE_URL;
+const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN;
+
 const UPDATE_LINE_ITEMS_MUTATION = `
   mutation checkoutLineItemsUpdate($checkoutId: ID!, $lineItems: [CheckoutLineItemUpdateInput!]!) {
     checkoutLineItemsUpdate(checkoutId: $checkoutId, lineItems: $lineItems) {
@@ -18,8 +21,8 @@ const UPDATE_LINE_ITEMS_MUTATION = `
 `;
 
 export async function updateLineItemQuantity(checkoutId: string, lineItemId: string, quantity: number) {
-    const endpoint = 'https://blackhorsedev.myshopify.com/api/2024-04/graphql';
-    const storefrontAccessToken = '7db2a4b955ecffa57c65e91ff17893ae';
+    const endpoint = `${SHOPIFY_STORE_URL}/api/2024-04/graphql`;
+    const storefrontAccessToken = STOREFRONT_ACCESS_TOKEN;
   
     const formattedCheckoutId = `${checkoutId}`;
     const formattedLineItemId = `${lineItemId}`;

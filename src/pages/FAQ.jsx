@@ -37,10 +37,7 @@ function FAQ(){
               const rect = div.getBoundingClientRect();
               
               if (rect.top > -50 && rect.top < 50) {
-                // Mycontext.faqCurrent != index ?
                 setMycontext({...Mycontext, faqCurrent: index, cartState:false, sidebarState:false})
-                // :
-                // null
               }
             });
           });
