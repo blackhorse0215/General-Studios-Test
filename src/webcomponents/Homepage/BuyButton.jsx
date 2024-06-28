@@ -29,6 +29,11 @@ function BuyButton(data){
     }
 
     useEffect(()=>{
+        console.log("data",data);
+        console.log("data.val", data.val);
+        console.log("data?.val", data?.val);
+        console.log("data.val.state", data.val.state);
+        console.log("data.val.state", data?.val.state);
         setValue(data?.val?.state)
     },[data])
 
