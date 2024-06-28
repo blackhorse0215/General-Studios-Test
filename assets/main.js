@@ -8,7 +8,7 @@ var ud,_,be,H,ee,Se,Sd,Md,Vd,Id,Ve,td={},Ie=[],ra=/acit|ex(?:s|g|n|p|$)|rph|grid
         }
       }
     }
-  `)).products.edges.map(t=>t.node)}async function He(i){return(await Ge(`
+  `)).products.edges.map(t=>t.node)}async function He(i){const r=await Ge(`
     query ($id: ID!) {
       product(id: $id) {
         id
@@ -60,7 +60,7 @@ var ud,_,be,H,ee,Se,Sd,Md,Vd,Id,Ve,td={},Ie=[],ra=/acit|ex(?:s|g|n|p|$)|rph|grid
         }
       }
     }
-  `,{id:i})).product}const xa=async(i,n,t)=>{const r=`
+  `,{id:i});return console.log(r),r.product}const xa=async(i,n,t)=>{const r=`
     mutation($checkoutId: ID!, $lineItems: [CheckoutLineItemInput!]!) {
       checkoutLineItemsAdd(checkoutId: $checkoutId, lineItems: $lineItems) {
         checkout {

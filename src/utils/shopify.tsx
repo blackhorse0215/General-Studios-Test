@@ -158,6 +158,8 @@ export async function getProductDetails(productId: string): Promise<ProductDetai
   `;
   const variables = { id: productId };
   const data = await fetchShopify<ProductResponse>(query, variables);
+  console.log(data);
+  
   return data.product;
 }
 
