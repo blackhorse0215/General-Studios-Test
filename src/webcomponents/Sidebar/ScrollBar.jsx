@@ -1,10 +1,8 @@
 import { h, render } from 'preact';
 import { useState, useEffect, useContext } from 'preact/hooks';
-import MyContext from '../../context/Mycontext';
 
 function ScrollBar(){
 
-    const {Mycontext, setMycontext} = useContext(MyContext)
     const [scrollTop, setScrollTop] = useState(0)
 
     useEffect(() => {

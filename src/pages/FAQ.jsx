@@ -12,9 +12,12 @@ function FAQ(){
     const [data, setData] = useState([])
 
     useEffect(()=>{
+      
       setMycontext({...Mycontext, sidebarState:false, cartState:false})
       document.body.style.overflow = ''
+
       FirstScroll()
+
       try{
         fetchFAQPageContent('faq')
         .then((data)=>{
@@ -27,6 +30,7 @@ function FAQ(){
       catch{
         console.log('error');
       }
+
     },[])
 
     useEffect(()=>{

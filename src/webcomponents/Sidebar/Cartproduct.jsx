@@ -1,9 +1,11 @@
 import { h, render } from 'preact';
 import { useState, useEffect, useContext} from 'preact/hooks';
 import getSymbolFromCurrency from 'currency-symbol-map';
+
 import {removeProductFromCheckout} from '../../utils/removeFromCart'
 import {updateLineItemQuantity} from '../../utils/ChangeQuantity'
 import MyContext from '../../context/Mycontext';
+
 
 function Cartproduct(data){
 

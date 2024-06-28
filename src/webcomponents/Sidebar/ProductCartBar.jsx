@@ -2,9 +2,9 @@ import { h, render } from 'preact';
 import { useState, useEffect, useContext } from 'preact/hooks';
 import MyContext from '../../context/Mycontext';
 import getSymbolFromCurrency from 'currency-symbol-map';
+
 import Cartproduct from './Cartproduct';
-import {createCheckoutUrl} from '../../utils/createCheckoutUrl'
-import { Link } from 'preact-router';
+
 
 function ProductCartBar(Cart){
 
