@@ -8,6 +8,9 @@ function BuyButton({id}){
     const {Mycontext, setMycontext} = useContext(MyContext)
 
     const addCart= async ()=>{
+        if(Mycontext.buttonState == false){
+            return
+        }
         const checkid = localStorage.getItem('checkoutID');
         try{
             await addProductToCheckout(checkid, id, 1)

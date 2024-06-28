@@ -75,12 +75,13 @@ function HomeProductItem({id}){
             if(Size == [] && k == true){
                 console.log(item.id);
                 setId(item.id)
-                if(item.availableForSale == true){
-                    setMycontext({...Mycontext, buttonState:true})
-                }
-                else{
-                    setMycontext({...Mycontext, buttonState:false})
-                }
+                console.log(item.availableForSale);
+                // if(item.availableForSale == true){
+                //     setMycontext({...Mycontext, buttonState:true})
+                // }
+                // else{
+                //     setMycontext({...Mycontext, buttonState:false})
+                // }
                 return
             }
             else{
@@ -92,12 +93,13 @@ function HomeProductItem({id}){
             }
             if(k == true && l == true){
                 setId(item.id)
-                if(item.availableForSale == true){
-                    setMycontext({...Mycontext, buttonState:true})
-                }
-                else{
-                    setMycontext({...Mycontext, buttonState:false})
-                }
+                console.log(item.availableForSale);
+                // if(item.availableForSale == true){
+                //     setMycontext({...Mycontext, buttonState:true})
+                // }
+                // else{
+                //     setMycontext({...Mycontext, buttonState:false})
+                // }
                 return;
             }
         })
