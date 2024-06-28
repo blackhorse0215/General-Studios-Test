@@ -110,7 +110,7 @@ function HomeProductItem({id}){
         <div id={productDetails.id} className="w-full  min-h-dvh flex justify-between max-lg:flex max-lg:flex-col">
             {
                 video != "" ?
-                    <div className={`${Mycontext.HomeProductId != id ? 'w-1/2' : 'w-10%'} transition-all duration-200 ease`}>
+                    <div className={`${Mycontext.HomeProductId != id ? 'w-1/2' : 'w-10%'} transition-all duration-1000 ease`}>
                         <video onClick={showDetails} controls={false} autoPlay loop muted className={` w-full h-full object-cover border-solid border border-black max-lg:min-h-500px`} >
                             <source src={video} type="video/mp4" />
                         </video>
@@ -118,7 +118,7 @@ function HomeProductItem({id}){
                     :
                     <></>
             }
-            <div className={`${Mycontext.HomeProductId != id ? 'w-1/2' : 'w-90%'} transition-all duration-200 ease border-solid border border-black `}>
+            <div className={`${Mycontext.HomeProductId != id ? 'w-1/2' : 'w-90%'} transition-all duration-1000 ease border-solid border border-black `}>
                 <div className={`flex overflow-hidden w-full h-full bg-white left-1/2 max-lg:flex-col`}>
                     <div className="p-8 min-w-[45vw-35] w-[45vw-35] text-3xl relative max-lg:w-full">
                         <h1 className="text-28px mb-20px">{productDetails.title}</h1>
